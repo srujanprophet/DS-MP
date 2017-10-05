@@ -2,8 +2,7 @@
 
 
 int A[10005];
-int ctr = 0;
-
+int ctr;
 
 int Parent(int i) {
 	return (i/2);
@@ -55,6 +54,7 @@ void show(int n) {
 }
 
 void test1() {
+		ctr = 0;
 	        FILE *fptr;
 	        fptr = fopen("test1.txt","r");
 	        int i;
@@ -68,6 +68,7 @@ void test1() {
 }
 
 void test2() {
+		ctr = 0;
 	        FILE *fptr;
 	        fptr = fopen("test2.txt","r");
 	        int i;
@@ -81,6 +82,7 @@ void test2() {
 }
 
 void test3() {
+		ctr = 0;
 	        FILE *fptr;
 	        fptr = fopen("test3.txt","r");
 	        int i;
@@ -94,6 +96,7 @@ void test3() {
 }
 
 void test4() {
+		ctr = 0;
 	        FILE *fptr;
 	        fptr = fopen("test4.txt","r");
 	        int i;
@@ -107,6 +110,7 @@ void test4() {
 }
 
 void test5() {
+		ctr = 0;
 	        FILE *fptr;
 	        fptr = fopen("test5.txt","r");
 	        int i;
