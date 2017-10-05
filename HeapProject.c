@@ -46,22 +46,87 @@ void Build_Max_Heap(int n) {
 }
 
 void show(int n) {
+	printf("\n***** ******** HEAP SIZE : %d *************\n",n);
 	for ( int i = 1; i <= n; i++ ) {
 		printf("%d ",A[i]);
 	}
-	printf("\n No. of Places Moved :  %d\n",ctr);
+	printf("\n*****************************************************\n");
+	printf("\nNo. of Places Moved :  %d\n\n",ctr);
+}
+
+void test1() {
+	        FILE *fptr;
+	        fptr = fopen("test1.txt","r");
+	        int i;
+		int n = 100;
+	        for ( i = 1 ; i <= 100; i++ ) {
+	                fscanf(fptr, "%d,", &A[i]);
+	        }
+		Build_Max_Heap(100);	       	
+		show(100);
+	        fclose(fptr);
+}
+
+void test2() {
+	        FILE *fptr;
+	        fptr = fopen("test2.txt","r");
+	        int i;
+		int n = 250;
+	        for ( i = 1 ; i <= 250; i++ ) {
+	                fscanf(fptr, "%d,", &A[i]);
+	        }
+		Build_Max_Heap(250);	       	
+		show(250);
+	        fclose(fptr);
+}
+
+void test3() {
+	        FILE *fptr;
+	        fptr = fopen("test3.txt","r");
+	        int i;
+		int n = 500;
+	        for ( i = 1 ; i <= 500; i++ ) {
+	                fscanf(fptr, "%d,", &A[i]);
+	        }
+		Build_Max_Heap(500);	       	
+		show(500);
+	        fclose(fptr);
+}
+
+void test4() {
+	        FILE *fptr;
+	        fptr = fopen("test4.txt","r");
+	        int i;
+		int n = 1000;
+	        for ( i = 1 ; i <= 1000; i++ ) {
+	                fscanf(fptr, "%d,", &A[i]);
+	        }
+		Build_Max_Heap(1000);	       	
+		show(1000);
+	        fclose(fptr);
+}
+
+void test5() {
+	        FILE *fptr;
+	        fptr = fopen("test5.txt","r");
+	        int i;
+		int n = 2000;
+	        for ( i = 1 ; i <= 2000; i++ ) {
+	                fscanf(fptr, "%d,", &A[i]);
+	        }
+		Build_Max_Heap(2000);	       	
+		show(2000);
+	        fclose(fptr);
 }
 
 int main() {
 	int i;
 	A[0] = 10005;
-	int Test[] = { 4,1,3,2,16,9,10,14,8,7};
-	int n = sizeof(Test)/sizeof(int);
-	for ( i = 1; i <= n; i++ ) {
-		A[i] = Test[i-1];
-	}
-	Build_Max_Heap(n);
-	show(n);
+	test1();
+	test2();
+	test3();
+	test4();
+	test5();
 	return 0;
 }
 
